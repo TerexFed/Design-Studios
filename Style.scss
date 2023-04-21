@@ -1,0 +1,91 @@
+@mixin image-set($w,$h,$bs,$br){
+    width: $w;
+    height: $h;
+    background-size: $bs;
+    background-repeat: $br;
+}
+
+@mixin center($par){
+    display: flex;
+    flex-direction: column;
+    justify-content: $par;
+    align-items: $par;
+    flex-wrap: nowrap;
+}
+
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    height: 80px;
+    @include center(center)
+}
+.burger{
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+}
+.burger span{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    margin-top: 5px;
+    top: 2px;
+}
+.ADS{
+
+    background-image: url("https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/0572b86bc0475a82a90459a0/pexels-photo-7932264.jpeg");
+    @include image-set(100vw, 700px, cover, no-repeat);
+    @include center(center);
+    text-shadow: 1.5px 1px white;
+}
+h1{
+    font-size: 70px;
+    font-weight: 400;
+}
+p{
+    font-size: 20px;
+}
+.Projects{
+    height: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Projects p{
+    width: 400px;
+}
+.pictures{
+     width: 700px;
+     height: 600px;
+     display: flex;
+}
+.pic{
+    @include image-set(200px, 200px, cover, no-repeat);
+    border-radius: 100px;
+    margin: 15px;
+}
+.kitchen{
+    background-image: url("https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/2c6af2fe949655179529c6d7/pexels-photo-4993062.jpeg?version=");
+    position: relative;
+    transform: scale(1.2);
+    right: -70px;
+    top: 20px;
+}
+.book{
+    background-image: url("https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/82944c8f63d8513da0fccb97/pexels-photo-4210787.jpeg?version=");
+    position: relative;
+    top: 300px;
+    right: 60px;
+}
+.fish{
+    background-image: url("https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/d0a08d412b965fb38caeda91/pexels-photo-6121091.jpeg?version=");
+    position: relative;
+    transform: scale(1.1);
+    top: 150px;
+}
